@@ -11,10 +11,6 @@ async function handleHelp(message) {
       '`!clean` — Deletes all non-embed messages in the channel (preserves Raid Helper posts, etc.).',
       '`!role @user <role name>` — Assigns the named role to the mentioned user.',
       '',
-      '**Player Lookup**',
-      '`!armory <name>` — Posts a link to the player\'s TBC Anniversary Classic Armory profile.',
-      '`!logs <name>` — Posts a link to the player\'s Warcraft Logs profile.',
-      '',
       '`!help` — Shows this message.',
     ].join('\n');
   

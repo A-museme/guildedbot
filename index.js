@@ -4,8 +4,6 @@ const { handleClear } = require('./commands/clear');
 const { handleRole } = require('./commands/role');
 const { handleClean } = require('./commands/clean');
 const { handleHelp } = require('./commands/help');
-const { handleArmory } = require('./commands/armory');
-const { handleLogs } = require('./commands/logs');
 
 const client = new Client({
   intents: [
@@ -34,13 +32,6 @@ client.on('messageCreate', async (message) => {
   if (command === 'help') {
     return handleHelp(message).catch(console.error);
   }
-  if (command === 'armory') {
-    return handleArmory(message, args).catch(console.error);
-  }
-  if (command === 'logs') {
-    return handleLogs(message, args).catch(console.error);
-  }
-
   // All other commands require Admin role
   const member = message.member;
   const hasAdmin = member?.permissions.has('Administrator') ||
